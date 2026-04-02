@@ -5,16 +5,16 @@ app = Flask(__name__)
 # fake database
 users = [
     {"id": 1, "name": "JOHN"},
-    {"id": 2, "name": "Rahul"}
+    {"id": 2, "name": "RAHUL"}
 ]
 
 # credentials
 credentials = {
-    "Sayanth": {"password": "1234", "id": 1},
-    "Rahul": {"password": "1234", "id": 2}
+    "JOHN": {"password": "1234", "id": 1},
+    "RAHUL": {"password": "1234", "id": 2}
 }
 
-# 🔐 LOGIN ROUTE
+#  LOGIN ROUTE
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
@@ -30,7 +30,7 @@ def login():
     return jsonify({"error": "Invalid credentials"}), 401
 
 
-# 🛡️ SECURE USER ENDPOINT (IDOR FIXED)
+#  SECURE USER ENDPOINT (IDOR FIXED)
 @app.route('/user/<int:id>', methods=['GET'])
 def get_user(id):
     token = request.headers.get("Authorization")
