@@ -13,7 +13,9 @@ Project Structure
 api-security-lab/
 
 -vulnerable_app.py   # Vulnerable API (IDOR present)
+
 -secure_app.py       # Fixed API (IDOR mitigated)
+
 -README.md           # Project documentation
 
 Vulnerability Description
