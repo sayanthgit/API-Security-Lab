@@ -4,14 +4,14 @@ app = Flask(__name__)
 
 # fake database
 users = [
-    {"id": 1, "name": "Sayanth"},
-    {"id": 2, "name": "Rahul"}
+    {"id": 1, "name": "JOHN"},
+    {"id": 2, "name": "RAHUL"}
 ]
 
 # credentials
 credentials = {
-    "Sayanth": {"password": "1234", "id": 1},
-    "Rahul": {"password": "1234", "id": 2}
+    "JOHN": {"password": "1234", "id": 1},
+    "RAHUL": {"password": "1234", "id": 2}
 }
 
 #  LOGIN ROUTE
